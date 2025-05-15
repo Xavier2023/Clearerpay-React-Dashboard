@@ -1,32 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NavBar.css";
-import { FaArrowDown, FaCog, FaUserCircle } from "react-icons/fa";
+import { FaCog, FaUserCircle } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
+import { CiGrid41 } from "react-icons/ci";
+import { FiMenu, FiX } from "react-icons/fi";
 
 const NavBar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
   return (
     <nav className="navbar">
       <div className="nav-left">
         <h1 className="nav-logo">Clearerpay</h1>
-        <ul className="nav-links">
-          <li>Dashboard</li>
-          <li>Wallet</li>
-          <li>Merchants</li>
-          <li>Transactions</li>
-          <li>Beneficiaries</li>
-        </ul>
+        <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <div className="nav-list">
+            <a className="nav-link active">
+              <CiGrid41 />
+              Dashboard
+            </a>
+            <a>Wallet</a>
+            <a>Merchants</a>
+            <a>Transactions</a>
+            <a>Beneficiaries</a>
+          </div>
+          <div className="nav-right">
+            <button className="account-btn">
+              <FaUserCircle className="user-icon" />
+              Personal account
+              <IoIosArrowDown />
+            </button>
+            <button className="settings-btn">
+              <FaCog className="settings-icon" />
+              Settings
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="nav-right">
-        <button className="account-btn">
-          <FaUserCircle className="user-icon" />
-          Personal account
-          <IoIosArrowDown />
-        </button>
-        <button className="setting-btn">
-          <FaCog className="setting-icon" />
-          Settings
-        </button>
-      </div>
+      <button className="menu-toggle" onClick={toggleMenu}>
+        {menuOpen ? <FiX size={22} /> : <FiMenu size={22} />}
+      </button>
     </nav>
   );
 };
