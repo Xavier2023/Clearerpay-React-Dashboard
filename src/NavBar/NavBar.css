@@ -1,144 +1,166 @@
+/* ===== Navbar Container ===== */
 .navbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 16px 32px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  z-index: 10;
 }
 
-.nav-left {
-  display: flex;
-  align-items: center;
-}
-
+/* ===== Logo ===== */
 .nav-logo {
   font-size: 32px;
   font-weight: 700;
-  margin-right: 30px;
-}
-
-.nav-links {
-  align-items: center;
-  justify-content: space-between;
-  list-style: none;
-}
-
-/* Existing styles (shortened here) */
-.nav-links a {
-  text-decoration: none;
-  color: #555;
-  font-size: 14px;
-  padding-bottom: 6px;
-}
-.nav-links a.active {
-  border-bottom: 2px solid #121212;
   color: #121212;
+  margin-right: 20px;
 }
 
-/* Hide menu toggle on desktop */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.nav-links a:hover {
-  color: black;
-}
-.nav-link {
+/* ===== Grouping Left Side ===== */
+.nav-left-group {
   display: flex;
   align-items: center;
-  gap: 6px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* ===== Nav Links ===== */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-grow: 1;
+  justify-content: space-between;
 }
 
 .nav-list {
   display: flex;
-  gap: 20px;
+  gap: 24px;
+}
+
+.nav-list a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-list a.active {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+.nav-list a:hover {
+  color: #000;
+}
+
+/* ===== Right Side Buttons ===== */
+.nav-right-group {
+  margin-left: auto;
 }
 
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 .account-btn {
   display: flex;
   align-items: center;
   gap: 6px;
-  background-color: grey;
+  background-color: #636566;
   color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 10px;
-  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 50px;
   font-size: 14px;
+  border: none;
+  cursor: pointer;
 }
 
 .settings-btn {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   background: none;
   border: none;
+  font-size: 14px;
+  color: #555;
   cursor: pointer;
-  color: gray;
-  transition: color 0.2s ease;
 }
 
-.settings-btn:hover {
-  color: black;
-}
-
-.icon {
-  margin-right: 6px;
+.user-icon,
+.settings-icon {
   font-size: 16px;
 }
 
-/* Mobile styles */
+/* ===== Hamburger Toggle ===== */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #121212;
+  cursor: pointer;
+}
+
+/* ===== Mobile Styles ===== */
 @media screen and (max-width: 768px) {
-  .navbar {
+  .nav-left-group {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
   }
 
   .nav-links {
     position: absolute;
-    top: 100px;
+    top: 64px;
     left: 0;
     right: 0;
-    background-color: white;
+    background-color: #fff;
     flex-direction: column;
     align-items: flex-start;
-    padding: 16px 24px;
-    gap: 12px;
+    padding: 20px 24px;
+    gap: 24px;
+    border-top: 1px solid #eee;
     display: none;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
-    z-index: 999;
   }
 
   .nav-links.open {
     display: flex;
   }
 
-  .menu-toggle {
-    display: block;
-    margin-left: 12px;
-  }
-
-  .navbar-left {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  .nav-list {
+    flex-direction: column;
+    gap: 12px;
     width: 100%;
   }
 
-  .account {
-    display: none; /* Hide for now on mobile */
+  .nav-list a {
+    width: 100%;
+    padding: 8px 0;
   }
 
-  .settings-icon {
-    display: none; /* Hide for now on mobile */
+  .nav-right-group {
+    width: 100%;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 24px;
+    top: 18px;
   }
 }

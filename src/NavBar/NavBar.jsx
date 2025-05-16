@@ -11,7 +11,7 @@ const NavBar = () => {
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   return (
     <nav className="navbar">
-      <div className="nav-left">
+      <div className="nav-left-group">
         <h1 className="nav-logo">Clearerpay</h1>
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
           <div className="nav-list">
@@ -24,22 +24,24 @@ const NavBar = () => {
             <a>Transactions</a>
             <a>Beneficiaries</a>
           </div>
-          <div className="nav-right">
-            <button className="account-btn">
-              <FaUserCircle className="user-icon" />
-              Personal account
-              <IoIosArrowDown />
-            </button>
-            <button className="settings-btn">
-              <FaCog className="settings-icon" />
-              Settings
-            </button>
+          <div className="nav-right-group">
+            <div className="nav-right">
+              <button className="account-btn">
+                <FaUserCircle className="user-icon" />
+                Personal account
+                <IoIosArrowDown />
+              </button>
+              <button className="settings-btn">
+                <FaCog className="settings-icon" />
+                Settings
+              </button>
+            </div>
           </div>
         </div>
+        <button className="menu-toggle" onClick={toggleMenu}>
+          {menuOpen ? <FiX size={22} /> : <FiMenu size={22} />}
+        </button>
       </div>
-      <button className="menu-toggle" onClick={toggleMenu}>
-        {menuOpen ? <FiX size={22} /> : <FiMenu size={22} />}
-      </button>
     </nav>
   );
 };
