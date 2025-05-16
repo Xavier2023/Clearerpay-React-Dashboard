@@ -19,6 +19,10 @@
   margin-right: 20px;
 }
 
+.nav-logo sup {
+  font-size: 10px;
+}
+
 /* ===== Grouping Left Side ===== */
 .nav-left-group {
   display: flex;

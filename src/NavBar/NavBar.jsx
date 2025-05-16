@@ -12,7 +12,7 @@ const NavBar = () => {
   return (
     <nav className="navbar">
       <div className="nav-left-group">
-        <h1 className="nav-logo">Clearerpay</h1>
+        <h1 className="nav-logo">Clearerpay<sup>TM</sup></h1>
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
           <div className="nav-list">
             <a className="nav-link active">
