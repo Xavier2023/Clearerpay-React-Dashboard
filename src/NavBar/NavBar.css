@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 32px;
+  padding: 16px 64px;
   background-color: #ffffff;
   border-bottom: 1px solid #e6e6e6;
   font-family: "Poppins", sans-serif;
@@ -115,7 +115,11 @@
 }
 
 /* ===== Mobile Styles ===== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 912px) {
+
+  .navbar {
+    padding: 6px 16px;
+  }
   .nav-left-group {
     flex-direction: row;
     align-items: center;
@@ -166,5 +170,11 @@
     position: absolute;
     right: 24px;
     top: 18px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 16px 24px;
   }
 }

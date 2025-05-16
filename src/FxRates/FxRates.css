@@ -1,0 +1,76 @@
+.fx-rates {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 16px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+  }
+  
+  .fx-title {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #333;
+    gap: 8px;
+  }
+  
+  .fx-title .icon {
+    font-size: 18px;
+    color: #4b5563;
+  }
+  
+  .fx-item {
+    display: flex;
+    align-items: center;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 6px 50px;
+    min-width: 140px;
+    gap: 10px;
+    font-size: 14px;
+    color: #111827;
+  }
+  
+  .domestic-currency,
+  .foreign-currency {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .fx-list {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scroll-behavior: smooth;
+  }
+
+  
+  
+  /* ✅ Horizontal scroll on small screens */
+  @media (max-width: 1300px) {
+    .fx-list {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 10px;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 8px;
+    }
+  
+    .fx-item {
+      flex: 0 0 auto;
+      min-width: 160px;
+      padding: 6px 24px;
+    }
+  
+    /* Optional: Hide scrollbar for Webkit */
+    .fx-list::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
