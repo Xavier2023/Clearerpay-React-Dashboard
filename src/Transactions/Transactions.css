@@ -42,6 +42,15 @@
   .tx-type {
     vertical-align: middle;
   }
+
+  .recipient {
+    margin-right: 10px;
+  }
+
+  .time {
+    margin-left: 10px;
+    color: gray;
+  }
   
   .icon {
     font-size: 14px;

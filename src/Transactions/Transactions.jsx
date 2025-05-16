@@ -61,7 +61,7 @@ const Transactions = () => (
                 </span>
               </td>
               <td>
-                {tx.recipient} . {tx.time}
+                <span className="recipient">{tx.recipient}</span> . <span className="time">{tx.time}</span>
               </td>
               <td
                 className={`amount ${

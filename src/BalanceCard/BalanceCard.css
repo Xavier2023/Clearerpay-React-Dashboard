@@ -23,6 +23,7 @@
 .currency span {
   color: gray;
   font-size: 16px;
+  margin-right: 10px;
 }
 
 .deposite {
