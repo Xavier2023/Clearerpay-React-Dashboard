@@ -16,6 +16,7 @@ const data = [
   { date: "8", moneyIn: 15000000, moneyOut: 100000 },
   { date: "15", moneyIn: 15000000, moneyOut: 10000000 },
   { date: "22", moneyIn: 40000000, moneyOut: 8000000 },
+  { date: "26", moneyIn: 30000000, moneyOut: 35000000 },
   { date: "31", moneyIn: 500000, moneyOut: 5000000 },
 ];
 
