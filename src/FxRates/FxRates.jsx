@@ -1,6 +1,5 @@
 import React from "react";
 import "./FxRates.css";
-import { FaGlobe } from "react-icons/fa";
 import { TbArrowsExchange2 } from "react-icons/tb";
 
 const fxData = [
@@ -15,7 +14,7 @@ const fxData = [
 const FXRates = () => (
   <div className="fx-rates">
     <h3 className="fx-title">
-      <FaGlobe className="icon" /> FX Rates
+      FX Rates
     </h3>
     <div className="fx-list">
       {fxData.map(({ from, to, rate, rateForeign }) => (

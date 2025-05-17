@@ -8,16 +8,15 @@ import {
   ResponsiveContainer,
   Legend,
   CartesianGrid,
-  LabelList,
 } from "recharts";
 import "./Chart.css";
 
 const data = [
-  { date: "1", moneyIn: 500000, moneyOut: 300000 },
-  { date: "8", moneyIn: 1500000, moneyOut: 700000 },
-  { date: "15", moneyIn: 2000000, moneyOut: 1600000 },
-  { date: "22", moneyIn: 1000000, moneyOut: 1000000 },
-  { date: "31", moneyIn: 500000, moneyOut: 300000 },
+  { date: "1", moneyIn: 100000, moneyOut: 0 },
+  { date: "8", moneyIn: 15000000, moneyOut: 100000 },
+  { date: "15", moneyIn: 15000000, moneyOut: 10000000 },
+  { date: "22", moneyIn: 40000000, moneyOut: 8000000 },
+  { date: "31", moneyIn: 500000, moneyOut: 5000000 },
 ];
 
 const Chart = () => {
