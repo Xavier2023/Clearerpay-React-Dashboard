@@ -62,13 +62,19 @@
       width: 100%;
       padding: 10px;
     }
-  
-    .send,
-    .receive,
-    .swap {
-      gap: 2px;
-      padding: 6px 16px;
-      font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .merchant {
+        flex-direction: column;
+    }
+
+    .merchant-info {
+        flex-direction: row;
+    }
+
+    .add-merchant {
+        gap: 10px;
     }
   }
   

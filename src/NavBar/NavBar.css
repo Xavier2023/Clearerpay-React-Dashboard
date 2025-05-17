@@ -24,7 +24,7 @@
 }
 
 /* ===== Grouping Left Side ===== */
-.nav-left-group {
+.nav-group {
   display: flex;
   align-items: center;
   width: 100%;
@@ -120,7 +120,7 @@
   .navbar {
     padding: 6px 16px;
   }
-  .nav-left-group {
+  .nav-group {
     flex-direction: row;
     align-items: center;
   }

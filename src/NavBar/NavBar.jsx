@@ -11,7 +11,7 @@ const NavBar = () => {
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   return (
     <nav className="navbar">
-      <div className="nav-left-group">
+      <div className="nav-group">
         <h1 className="nav-logo">Clearerpay<sup>TM</sup></h1>
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
           <div className="nav-list">
