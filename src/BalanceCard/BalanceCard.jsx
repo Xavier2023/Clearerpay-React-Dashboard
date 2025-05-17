@@ -10,7 +10,7 @@ const BalanceCard = () => {
     <div className='balance-container'>
         <div className="acc-balance">
             <h3 className='currency'>NGN <span>. Naira</span> <IoIosArrowDown /></h3>
-            <a href="#" className="deposite"> <FaPlus />Deposite</a>
+            <a href="#" className="deposit"> <FaPlus />Deposit</a>
         </div>
         <h2 className="amount"> <span>&#8358;</span> 34,645,223</h2>
         <div className="action-btn">
