@@ -1,80 +1,95 @@
 .merchant-container {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    padding: 20px;
-    width: 100%;
-    margin-top: 20px;
-    box-shadow: 5px 5px 5px 5px #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 5px 5px 5px 5px #f8f8f8;
 }
 
 .merchant-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 6px;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
 }
 
 .merchant {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .merchant-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
 }
 
 .see-all {
-    text-align: end;
-    margin-top: 10px;
-    color: gray;
-    font-size: 12px;
+  text-align: end;
+  margin-top: 10px;
+  color: gray;
+  font-size: 12px;
 }
 
 .initials {
-    font-size: 12px;
-    background-color: #f8f8f8;
-    border-radius: 100px;
-    padding: 8px;
+  font-size: 12px;
+  background-color: #f8f8f8;
+  border-radius: 100px;
+  padding: 8px;
 }
 
 .merchants-name {
-    font-size: 12px;
-    background-color: #f8f8f8;
-    border-radius: 6px;
-    padding: 2px 5px;
+  font-size: 12px;
+  background-color: #f8f8f8;
+  border-radius: 6px;
+  padding: 2px 5px;
 }
 
 .add-merchant {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    text-decoration: none;
-    color: black;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: black;
 }
 
-@media (max-width: 900px) {
-    .merchant-container {
-      width: 100%;
-      padding: 10px;
-    }
+@media (max-width: 1200px) {
+  .merchant-container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .merchant {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
   }
 
-  @media (max-width: 768px) {
-    .merchant {
-        flex-direction: column;
-    }
-
-    .merchant-info {
-        flex-direction: row;
-    }
-
-    .add-merchant {
-        gap: 10px;
-    }
+  .merchant-info {
+    flex-direction: row;
   }
-  
+
+  .add-merchant {
+    gap: 10px;
+  }
+
+  .initials {
+    font-size: 20px;
+    padding: 12px;
+  }
+
+  .merchants-name {
+    font-size: 20px;
+    padding: 2px 15px;
+  }
+
+  .merchant-info {
+    gap: 40px;
+  }
+}
