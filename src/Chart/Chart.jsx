@@ -52,6 +52,7 @@ const Chart = () => {
             stroke="#facc15"
             strokeWidth={2}
             name="Money in ₦1,000,000"
+            dot={false}
           ></Line>
           <Line
             type="monotone"
@@ -59,6 +60,7 @@ const Chart = () => {
             stroke="#ef4444"
             strokeWidth={2}
             name="Money out ₦1,000,000"
+            dot={false}
           ></Line>
         </LineChart>
       </ResponsiveContainer>

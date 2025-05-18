@@ -92,12 +92,12 @@
     color: #f59e0b;
   }
   
-  .amount.positive {
-    color: black;
-  }
-  
-  .amount.negative {
+  .neg {
     color: #ef4444;
+  }
+
+  td p {
+    text-align: right;
   }
   
   @media (max-width: 768px) {
@@ -105,5 +105,23 @@
       font-size: 0.85rem;
       padding: 12px 10px;
     }
+
+    .transactions-table.no-head td {
+    padding: 14px 3px;
+  }
+
+   td p {
+    text-align: center;
+  }
+  }
+
+  @media (max-width: 1200px) {
+    .transactions-table.no-head td {
+    padding: 14px 3px;
+  }
+
+   td p {
+    text-align: center;
+  }
   }
   

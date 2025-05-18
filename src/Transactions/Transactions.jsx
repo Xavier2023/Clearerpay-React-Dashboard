@@ -10,7 +10,7 @@ const transactions = [
     currency: "GBP",
     recipient: "Sent to John Doe",
     time: "Today, 13:30",
-    amount: "-₦1,000,000",
+    amount: <p className="neg">-₦1,000,000</p>,
     icon: <FaArrowUp className="icon red" />,
     button: <BsThreeDotsVertical className="icon" />,
   },
@@ -19,7 +19,7 @@ const transactions = [
     fromTo: "GBP → NGN",
     recipient: "Sent to John Doe",
     time: "Today, 13:30",
-    amount: "-₤1,000 / ₦200,000",
+    amount: <p><span className="neg">-₤1,000</span>/+₦200,000</p>,
     icon: <TbArrowsExchange className="icon orange" />,
     button: <BsThreeDotsVertical className="icon" />,
   },
@@ -28,7 +28,7 @@ const transactions = [
     currency: "GBP → NGN",
     recipient: "Sent to John Doe",
     time: "Today, 13:30",
-    amount: "+₦200,000",
+    amount: <p>+₦200,000</p>,
     icon: <FaArrowDown className="icon green" />,
     button: <BsThreeDotsVertical className="icon" />,
   },
@@ -37,7 +37,7 @@ const transactions = [
     currency: "GBP",
     recipient: "Sent to John Doe",
     time: "Today, 13:30",
-    amount: "+₦200,000",
+    amount: <p>+₦200,000</p>,
     icon: <FaArrowDown className="icon gray" />,
     button: <BsThreeDotsVertical className="icon" />,
   },
@@ -63,11 +63,7 @@ const Transactions = () => (
               <td>
                 <span className="recipient">{tx.recipient}</span> . <span className="time">{tx.time}</span>
               </td>
-              <td
-                className={`amount ${
-                  tx.amount.startsWith("-") ? "negative" : "positive"
-                }`}
-              >
+              <td>
                 {tx.amount}
               </td>
               <td>{tx.button}</td>

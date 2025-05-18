@@ -1,11 +1,16 @@
 import React from 'react'
-import { FaArrowDown, FaArrowUp, FaPlus } from 'react-icons/fa'
-import { IoIosArrowDown } from 'react-icons/io'
+import { FaPlus } from 'react-icons/fa'
 import './MerchantsCard.css'
-import { GoArrowSwitch } from 'react-icons/go'
-import { BsThreeDotsVertical } from 'react-icons/bs'
 
 const MerchantsCard = () => {
+
+  const merchants = [
+  { initials: 'AD', name: 'Adisa Debo...' },
+  { initials: 'AD', name: 'Adisa Debo...' },
+  { initials: 'AD', name: 'Adisa Debo...' },
+  { initials: 'AD', name: 'Adisa Debo...' },
+  { initials: 'AD', name: 'Adisa Debo...' },
+];
   return (
     <div className='merchant-container'>
         <div className='merchant-header'>
@@ -13,26 +18,12 @@ const MerchantsCard = () => {
             <a href="#" className="add-merchant"> <FaPlus />Add Merchants</a>
         </div>
         <div className="merchant">
-            <div className="merchant-info">
-              <h2 className="initials">AD</h2>
-              <p className="merchants-name">Adisa Debo...</p>
+            {merchants.map((merchant, index) => (
+              <div className="merchant-info" key={index}>
+                <h2 className="initials">{merchant.initials}</h2>
+                <p className="merchants-name">{merchant.name}</p>
             </div>
-            <div className="merchant-info">
-              <h2 className="initials">AD</h2>
-              <p className="merchants-name">Adisa Debo...</p>
-            </div>
-            <div className="merchant-info">
-              <h2 className="initials">AD</h2>
-              <p className="merchants-name">Adisa Debo...</p>
-            </div>
-            <div className="merchant-info">
-              <h2 className="initials">AD</h2>
-              <p className="merchants-name">Adisa Debo...</p>
-            </div>
-            <div className="merchant-info">
-              <h2 className="initials">AD</h2>
-              <p className="merchants-name">Adisa Debo...</p>
-            </div>
+            ))}
         </div>
         <a className="see-all">See all</a>
     </div>
